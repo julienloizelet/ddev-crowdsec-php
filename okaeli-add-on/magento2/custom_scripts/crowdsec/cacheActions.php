@@ -1,6 +1,7 @@
 <?php
 /**
- *
+ * #ddev-generated
+ * # Remove the line above if you don't want this file to be overwritten when you run ddev get
  * Run a specific cache action from browser (development only, do not use in production)
  *
  *

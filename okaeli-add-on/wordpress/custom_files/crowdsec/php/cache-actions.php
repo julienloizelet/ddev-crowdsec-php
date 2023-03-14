@@ -1,5 +1,7 @@
 <?php
 /**
+ * #ddev-generated
+ * # Remove the line above if you don't want this file to be overwritten when you run ddev get
  * This script is aimed to be called directly in a browser
  * It will act on the LAPI cache depending on the auto-prepend settings file and on the passed parameter.
  */
