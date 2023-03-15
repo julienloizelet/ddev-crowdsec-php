@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+#ddev-generated
+# Remove the line above if you don't want this file to be overwritten
+# when you run ddev get julienloizelet/ddev-crowdsec-php
+
 ## Description: Create a watcher
 ## Usage: create-watcher login password
 ## Example: "ddev create-watcher watcherLogin watcherPassword"
