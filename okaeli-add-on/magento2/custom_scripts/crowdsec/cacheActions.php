@@ -1,12 +1,13 @@
 <?php
 /**
  * #ddev-generated
- * # Remove the line above if you don't want this file to be overwritten when you run ddev get
+ * Remove the line above if you don't want this file to be overwritten
+ * when you run ddev get julienloizelet/ddev-crowdsec-php
+ */
+/**
  * Run a specific cache action from browser (development only, do not use in production)
  *
- *
  */
-
 use CrowdSec\Bouncer\Helper\Data as Data;
 use CrowdSec\Bouncer\Model\Bouncer;
 use CrowdSec\Bouncer\Constants;

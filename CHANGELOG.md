@@ -10,9 +10,19 @@ The [public API](https://semver.org/spec/v2.0.0.html#spec-item-1) for this proje
 file and `project_files` listed in the `install.yaml` file.
 
 ------
+## [0.0.3](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.3) - 2023-03-15
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.2...v0.0.3)
+
+### Changed
+
+- Update ddev signature in all files
+
+---
 
 ## [0.0.2](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.2) - 2023-03-14
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.1...v0.0.2)
+
+### Changed
 
 - Add ddev signature in all files
 
