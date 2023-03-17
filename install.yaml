@@ -4,7 +4,6 @@ name: crowdsec-php
 project_files:
 - commands/crowdsec/create-bouncer
 - commands/crowdsec/create-watcher
-- commands/host/crowdsec-prepend-nginx
 - okaeli-add-on/config_overrides/crowdsec/config.crowdsec.yaml
 - okaeli-add-on/custom_files/crowdsec/cfssl/agent.pem
 - okaeli-add-on/custom_files/crowdsec/cfssl/agent-key.pem
