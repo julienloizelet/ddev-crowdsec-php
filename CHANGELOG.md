@@ -11,6 +11,19 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [0.0.6](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.6) - 2023-03-17
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.5...v0.0.6)
+
+### Changed
+
+- List each file individually in `project_files`
+
+### Added
+
+- Add `post_install_actions` to copy some DDEV project type files
+
+---
+
 ## [0.0.5](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.5) - 2023-03-15
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.4...v0.0.5)
 

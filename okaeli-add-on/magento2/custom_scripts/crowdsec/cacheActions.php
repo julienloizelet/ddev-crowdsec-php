@@ -6,6 +6,7 @@
  */
 /**
  * Run a specific cache action from browser (development only, do not use in production)
+ * This script should be copied in the pub folder of your Magento 2 sources
  *
  */
 use CrowdSec\Bouncer\Helper\Data as Data;

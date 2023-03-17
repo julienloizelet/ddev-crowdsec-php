@@ -5,8 +5,10 @@
  * when you run ddev get julienloizelet/ddev-crowdsec-php
  */
 /**
- * This script is aimed to be called directly in a browser
+ * This script is aimed to be called directly in a browser (development only, do not use in production)
  * It will act on the LAPI cache depending on the auto-prepend settings file and on the passed parameter.
+ * This script should be copied in the root folder of your WordPress sources
+ *
  */
 require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';

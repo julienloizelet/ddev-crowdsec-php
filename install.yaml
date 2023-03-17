@@ -2,6 +2,35 @@ name: crowdsec-php
 
 # list of files and directories listed that are copied into project .ddev directory
 project_files:
+- commands/crowdsec/create-bouncer
+- commands/crowdsec/create-watcher
+- commands/host/crowdsec-prepend-nginx
+- okaeli-add-on/config_overrides/crowdsec/config.crowdsec.yaml
+- okaeli-add-on/custom_files/crowdsec/cfssl/agent.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/agent-key.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/bouncer.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/bouncer-key.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/ca-chain.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/server.pem
+- okaeli-add-on/custom_files/crowdsec/cfssl/server-key.pem
+- okaeli-add-on/custom_files/crowdsec/custom-config.yaml
+- okaeli-add-on/custom_files/crowdsec/custom-local-api-credentials.yaml
+- okaeli-add-on/custom_scripts/post-install.sh
+- okaeli-add-on/custom_scripts/bash/helpers/colors.sh
+- okaeli-add-on/magento2/commands/host/crowdsec-config
+- okaeli-add-on/magento2/custom_files/crowdsec/crowdsec-prepend.ini
+- okaeli-add-on/magento2/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf
+- okaeli-add-on/magento2/custom_scripts/crowdsec/cacheActions.php
+- okaeli-add-on/native/commands/host/crowdsec-config
+- okaeli-add-on/native/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf
+- okaeli-add-on/wordpress/commands/host/crowdsec-config
+- okaeli-add-on/wordpress/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf
+- okaeli-add-on/wordpress/custom_files/crowdsec/php/cache-actions.php
+- okaeli-add-on/wordpress/custom_files/crowdsec/php/cache-actions-from-plugin-folder.php
 - docker-compose.crowdsec.yaml
-- okaeli-add-on
-- commands
+
+post_install_actions:
+  - |
+   chmod +x okaeli-add-on/custom_scripts/post-install.sh
+   ./okaeli-add-on/custom_scripts/post-install.sh
+
