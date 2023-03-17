@@ -1,8 +1,9 @@
 <?php
 /**
  * #ddev-generated
- * Remove the line above if you don't want this file to be overwritten
- * when you run ddev get julienloizelet/ddev-crowdsec-php
+ * ddev manages this file and may delete or overwrite it unless the above line is removed.
+ * This file comes from "ddev get julienloizelet/ddev-crowdsec-php"
+ *
  */
 /**
  * This script is aimed to be called directly in a browser (development only, do not use in production)

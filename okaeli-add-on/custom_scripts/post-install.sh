@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #ddev-generated
-# Remove the line above if you don't want this file to be overwritten
-# when you run ddev get julienloizelet/ddev-crowdsec-php
+# ddev manages this file and may delete or overwrite it unless the above line is removed.
+# This file comes from "ddev get julienloizelet/ddev-crowdsec-php"
 
 # Check DDEV version
 CURRENT_DIR=$(dirname "$0");
