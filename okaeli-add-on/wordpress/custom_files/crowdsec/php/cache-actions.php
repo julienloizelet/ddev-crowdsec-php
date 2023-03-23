@@ -10,9 +10,9 @@
  * It will act on the LAPI cache depending on the auto-prepend settings file and on the passed parameter.
  * This script should be copied in the root folder of your WordPress sources
  */
-require_once __DIR__ . '/my-own-modules/crowdsec-bouncer/vendor/autoload.php';
-require_once __DIR__ . '/my-own-modules/crowdsec-bouncer/inc/Bouncer.php';
-require_once __DIR__.'/my-own-modules/crowdsec-bouncer/inc/standalone-settings.php';
+require_once __DIR__ . '/my-code/crowdsec-bouncer/vendor/autoload.php';
+require_once __DIR__ . '/my-code/crowdsec-bouncer/inc/Bouncer.php';
+require_once __DIR__.'/my-code/crowdsec-bouncer/inc/standalone-settings.php';
 
 /**
  * @var $crowdSecStandaloneBouncerConfig

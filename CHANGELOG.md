@@ -11,6 +11,18 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+
+## [0.0.7](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.7) - 2023-03-23
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.6...v0.0.7)
+
+### Changed
+
+- Rename development folder `my-own-modules` to `my-code`
+
+
+---
+
+
 ## [0.0.6](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.6) - 2023-03-17
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.5...v0.0.6)
 
