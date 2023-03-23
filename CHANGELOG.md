@@ -12,6 +12,17 @@ file and `project_files` listed in the `install.yaml` file.
 ------
 
 
+## [0.0.8](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.8) - 2023-03-23
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.7...v0.0.8)
+
+### Changed
+
+- Change `crowdsec-config` for native php to run only if crowdsec-bouncer-lib project is detected
+
+
+---
+
+
 ## [0.0.7](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.7) - 2023-03-23
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.6...v0.0.7)
 
