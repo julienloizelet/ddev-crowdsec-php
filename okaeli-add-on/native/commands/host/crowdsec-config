@@ -8,7 +8,7 @@
 ## Usage: crowdsec-config
 ## Example: "ddev crowdsec-config"
 
-if [[ $DDEV_PROJECT == crowdsec-bouncer-lib ]]
+if [[ $DDEV_PROJECT == crowdsec-standalone-bouncer ]]
 then
 echo "Crowdsec Bouncer LIB project detected"
 BOUNCER_KEY=$(ddev create-bouncer | sed 's/\r$//')
@@ -24,7 +24,7 @@ echo "Now setting ${BOUNCER_KEY} as CrowdSec_Bouncer Api key"
 ddev exec sed -i -e "$SED_EXPRESSION_ONE"
 echo "Now setting ${PROXY_IP} as CrowdSec_Bouncer trusted forward IPs"
 ddev exec sed -i -e "$SED_EXPRESSION_TWO"
-echo "Please enable auto-prepend if necessary by running the following command from the .ddev folder)"
+echo "Please enable auto-prepend if necessary by running the following command from the .ddev folder:"
 echo "ddev nginx-config okaeli-add-on/native/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf"
 exit 0
 fi
