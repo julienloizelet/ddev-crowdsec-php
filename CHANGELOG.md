@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [0.0.12](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.12) - 2023-04-12
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.11...v0.0.12)
+
+### Changed
+
+- Change paths for standalone bouncer `auto_prepend_file` files
+
+---
+
 
 ## [0.0.11](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.11) - 2023-04-11
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.10...v0.0.11)
