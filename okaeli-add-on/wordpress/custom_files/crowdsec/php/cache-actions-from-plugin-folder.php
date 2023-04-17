@@ -13,15 +13,14 @@
  */
 require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';
-require_once __DIR__.'/wp-content/plugins/crowdsec/inc/standalone-settings.php';
 
 /**
  * @var $crowdSecStandaloneBouncerConfig
  */
 if (isset($_GET['action']) && in_array($_GET['action'], ['refresh', 'clear', 'prune','captcha-phrase'])) {
     $action = $_GET['action'];
-    /** @var array $crowdSecJsonStandaloneConfig */
-    $crowdSecConfigs = json_decode($crowdSecJsonStandaloneConfig, true);
+    $jsonConfigs = require_once __DIR__.'/wp-content/plugins/crowdsec/inc/standalone-settings.php';
+    $crowdSecConfigs = json_decode($jsonConfigs, true);
     $bouncer = new Bouncer($crowdSecConfigs);
     $result = "<h1>Cache action has been done: $action</h1>";
 

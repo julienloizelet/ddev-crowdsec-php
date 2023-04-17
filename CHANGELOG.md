@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [0.0.13](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.13) - 2023-04-17
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.12...v0.0.13)
+
+### Changed
+
+- Change `standalone-settings.php` content for WordPress scripts
+
+---
+
+
 ## [0.0.12](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v0.0.12) - 2023-04-12
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.11...v0.0.12)
 
