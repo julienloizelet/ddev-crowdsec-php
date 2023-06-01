@@ -14,13 +14,13 @@ BOUNCER_KEY=$(ddev create-bouncer wordpress | sed 's/\r$//')
 API_URL="https://crowdsec:8080"
 echo "Bouncer created"
 echo "Now setting ${BOUNCER_KEY} as CrowdSec_Bouncer Api key"
-if [ $CHECKMULTISITE == "true" ]; then
+if [[ "$CHECKMULTISITE" == "true" ]]; then
   ddev wp network meta update 1 crowdsec_api_key "${BOUNCER_KEY}"
 else
   ddev wp option set crowdsec_api_key "${BOUNCER_KEY}"
 fi
 echo "Now setting ${API_URL} as CrowdSec_Bouncer Api url"
-if [ $CHECKMULTISITE == "true" ]; then
+if [[ "$CHECKMULTISITE" == "true" ]]; then
   ddev wp network meta update 1 crowdsec_api_url "${API_URL}"
 else
   ddev wp option set crowdsec_api_url "${API_URL}"

@@ -11,6 +11,14 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.0.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.0.1) - 2023-06-01
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.0.0...v1.0.1)
+
+### Fixed
+
+- Fix `crowdsec-config` content for WordPress multisite
+
+---
 
 ## [1.0.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.0.0) - 2023-05-19
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v0.0.13...v1.0.0)
