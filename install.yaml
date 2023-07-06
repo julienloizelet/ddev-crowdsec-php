@@ -19,6 +19,7 @@ project_files:
 - okaeli-add-on/magento2/commands/host/crowdsec-config
 - okaeli-add-on/magento2/custom_files/crowdsec/crowdsec-prepend.ini
 - okaeli-add-on/magento2/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf
+- okaeli-add-on/magento2/custom_files/crowdsec/engine/docker-compose.override.yaml
 - okaeli-add-on/magento2/custom_scripts/crowdsec/cacheActions.php
 - okaeli-add-on/native/commands/host/crowdsec-config
 - okaeli-add-on/native/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf

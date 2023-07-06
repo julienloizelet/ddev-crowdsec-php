@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.1.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.1.0) - 2023-07-06
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.0.1...v1.1.0)
+
+### Added
+
+- Add `docker-compose.override.yaml` for Playwright test and CrowdSec Engine Magento 2 extension
+
+---
+
+
 ## [1.0.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.0.1) - 2023-06-01
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.0.0...v1.0.1)
 

@@ -1,0 +1,4 @@
+services:
+  playwright:
+    environment:
+      - PLAYWRIGHT_TEST_DIR=my-own-modules/crowdsec-engine/Test/EndToEnd
