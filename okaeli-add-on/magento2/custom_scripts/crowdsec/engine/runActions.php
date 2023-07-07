@@ -98,6 +98,9 @@ class RunActionRunner extends \Magento\Framework\App\Http
                 case 'prune':
                     $result = json_encode($this->remediation->getCacheStorage()->prune(), true);
                     break;
+                case 'get-ip':
+                    $result = $this->helper->getRealIp();
+                    break;
                 case 'delete-events':
                     $ip = $_GET['ip'];
                     $searchCriteria = $this->searchCriteriaBuilder
@@ -131,7 +134,7 @@ class RunActionRunner extends \Magento\Framework\App\Http
 </head>
 
 <body>
-    $result
+    <h1>$result</h1>
 </body>
 </html>
 ";
