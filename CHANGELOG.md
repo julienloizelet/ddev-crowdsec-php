@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+
+## [1.2.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.2.0) - 2023-07-07
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.1.0...v1.2.0)
+
+### Added
+
+- Add `runActions.php` script for CrowdSec Engine Magento 2 extension
+
+---
+
 ## [1.1.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.1.0) - 2023-07-06
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.0.1...v1.1.0)
 
