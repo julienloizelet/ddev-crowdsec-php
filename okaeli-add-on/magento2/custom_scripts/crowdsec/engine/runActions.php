@@ -14,6 +14,7 @@
 use CrowdSec\Engine\Api\Data\EventInterface;
 use CrowdSec\Engine\Api\EventRepositoryInterface;
 use CrowdSec\Engine\Helper\Data as Helper;
+use CrowdSec\Engine\Helper\Event as EventHelper;
 use CrowdSec\Engine\CapiEngine\Remediation;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\App\AreaList;
@@ -36,6 +37,10 @@ class RunActionRunner extends \Magento\Framework\App\Http
      * @var Helper
      */
     private $helper;
+    /**
+     * @var EventHelper
+     */
+    private $eventHelper;
     /**
      * @var Remediation
      */
@@ -62,6 +67,7 @@ class RunActionRunner extends \Magento\Framework\App\Http
         State $state,
         Registry $registry,
         Helper $helper,
+        EventHelper $eventHelper,
         Remediation $remediation,
         SearchCriteriaBuilder $searchCriteriaBuilder,
         EventRepositoryInterface $eventRepository,
@@ -75,6 +81,7 @@ class RunActionRunner extends \Magento\Framework\App\Http
         $this->_state->setAreaCode('adminhtml');
 
         $this->helper = $helper;
+        $this->eventHelper = $eventHelper;
         $this->remediation = $remediation;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
         $this->eventRepository = $eventRepository;
@@ -120,6 +127,12 @@ class RunActionRunner extends \Magento\Framework\App\Http
                     $result1 = $this->storage->storeMachineId($machineId);
                     $result2 = $this->storage->storePassword($password);
                     $result = json_encode(['id' => $result1, 'password' => $result2], true);
+                    break;
+                case 'add-alert':
+                    $ip = $_GET['ip'];
+                    $scenario = $_GET['scenario'];
+                    $alert = ['ip' => $ip, 'scenario' => 'addAlertTest/' . $scenario];
+                    $result = json_encode($this->eventHelper->addAlertToQueue($alert), true);
                     break;
                 default:
                     throw new Exception("Unknown action type:$action");

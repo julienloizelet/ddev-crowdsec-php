@@ -11,6 +11,14 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.4.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.4.0) - 2023-07-11
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.3.0...v1.4.0)
+
+### Changed
+
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (add alert method)
+
+---
 
 ## [1.3.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.3.0) - 2023-07-07
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.2.0...v1.3.0)
