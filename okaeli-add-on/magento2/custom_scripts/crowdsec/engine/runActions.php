@@ -23,6 +23,7 @@ use Magento\Framework\App\Request\Http as RequestHttp;
 use Magento\Framework\App\Response\Http as ResponseHttp;
 use Magento\Framework\App\State;
 use Magento\Framework\Event\Manager;
+use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\ObjectManager\ConfigLoaderInterface;
 use Magento\Framework\ObjectManagerInterface;
 use Magento\Framework\Registry;
@@ -53,9 +54,10 @@ class RunActionRunner extends \Magento\Framework\App\Http
      * @var EventRepositoryInterface
      */
     private $eventRepository;
-
+    /**
+     * @var Storage
+     */
     private $storage;
-
 
     public function __construct(
         ObjectManagerInterface $objectManager,
@@ -133,6 +135,13 @@ class RunActionRunner extends \Magento\Framework\App\Http
                     $scenario = $_GET['scenario'];
                     $alert = ['ip' => $ip, 'scenario' => 'addAlertTest/' . $scenario];
                     $result = json_encode($this->eventHelper->addAlertToQueue($alert), true);
+                    break;
+                case 'add-alert-by-event':
+                    $ip = $_GET['ip'];
+                    $scenario = $_GET['scenario'];
+                    $alert = ['ip' => $ip, 'scenario' => 'testAlertEvent/' . $scenario];
+                    $this->_eventManager->dispatch('crowdsec_engine_detected_alert', ['alert' => $alert]);
+                    $result = 'dispatched';
                     break;
                 default:
                     throw new Exception("Unknown action type:$action");
