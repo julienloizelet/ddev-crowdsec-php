@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.6.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.6.0) - 2023-08-17
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.5.1...v1.6.0)
+
+### Changed
+
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (add set forced ip method)
+
+---
+
 ## [1.5.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.5.1) - 2023-08-17
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.5.0...v1.5.1)
 

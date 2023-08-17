@@ -23,11 +23,12 @@ use Magento\Framework\App\Request\Http as RequestHttp;
 use Magento\Framework\App\Response\Http as ResponseHttp;
 use Magento\Framework\App\State;
 use Magento\Framework\Event\Manager;
-use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\ObjectManager\ConfigLoaderInterface;
 use Magento\Framework\ObjectManagerInterface;
 use Magento\Framework\Registry;
 use CrowdSec\Engine\CapiEngine\Storage;
+use Magento\Framework\App\Config\Storage\WriterInterface;
+use Magento\Framework\App\Cache\TypeListInterface;
 
 require '../app/bootstrap.php';
 
@@ -58,6 +59,14 @@ class RunActionRunner extends \Magento\Framework\App\Http
      * @var Storage
      */
     private $storage;
+    /**
+     * @var WriterInterface
+     */
+    private $configWriter;
+    /**
+     * @var TypeListInterface
+     */
+    private $cacheTypeList;
 
     public function __construct(
         ObjectManagerInterface $objectManager,
@@ -74,6 +83,8 @@ class RunActionRunner extends \Magento\Framework\App\Http
         SearchCriteriaBuilder $searchCriteriaBuilder,
         EventRepositoryInterface $eventRepository,
         Storage $storage,
+        WriterInterface $configWriter,
+        TypeListInterface $cacheTypeList,
         ExceptionHandlerInterface $exceptionHandler = null
     ) {
 
@@ -81,14 +92,14 @@ class RunActionRunner extends \Magento\Framework\App\Http
             $registry, $exceptionHandler);
 
         $this->_state->setAreaCode('adminhtml');
-
         $this->helper = $helper;
         $this->eventHelper = $eventHelper;
         $this->remediation = $remediation;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
         $this->eventRepository = $eventRepository;
         $this->storage = $storage;
-
+        $this->configWriter = $configWriter;
+        $this->cacheTypeList = $cacheTypeList;
     }
 
     function launch()
@@ -142,6 +153,12 @@ class RunActionRunner extends \Magento\Framework\App\Http
                     $alert = ['ip' => $ip, 'scenario' => 'testAlertEvent/' . $scenario];
                     $this->_eventManager->dispatch('crowdsec_engine_detected_alert', ['alert' => $alert]);
                     $result = 'dispatched';
+                    break;
+                case 'set-forced-ip':
+                    $ip = $_GET['ip'];
+                    $this->configWriter->save(Helper::XML_PATH_FORCED_TEST_IP, $ip);
+                    $this->cacheTypeList->cleanType('config');
+                    $result = 'saved';
                     break;
                 default:
                     throw new Exception("Unknown action type:$action");
