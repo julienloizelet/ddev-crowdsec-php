@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.5.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.5.1) - 2023-08-17
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.5.0...v1.5.1)
+
+### Fixed
+
+- Renew `cfssl` certificates that were expired
+
+---
+
+
 ## [1.5.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.5.0) - 2023-08-01
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.4.0...v1.5.0)
 
