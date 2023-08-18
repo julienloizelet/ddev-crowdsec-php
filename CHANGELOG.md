@@ -11,12 +11,21 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.7.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.7.0) - 2023-08-18
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.6.0...v1.7.0)
+
+### Changed
+
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (implement `add-local-decision` action)
+
+---
+
 ## [1.6.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.6.0) - 2023-08-17
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.5.1...v1.6.0)
 
 ### Changed
 
-- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (add set forced ip method)
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (implement `set-forced-ip` action)
 
 ---
 
@@ -35,7 +44,7 @@ file and `project_files` listed in the `install.yaml` file.
 
 ### Changed
 
-- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (add alert by event method)
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (implement `add-alert-by-event` action)
 
 ---
 
@@ -45,7 +54,7 @@ file and `project_files` listed in the `install.yaml` file.
 
 ### Changed
 
-- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (add alert method)
+- Update `runActions.php` script for CrowdSec Engine Magento 2 extension (implement `add-alert` action)
 
 ---
 

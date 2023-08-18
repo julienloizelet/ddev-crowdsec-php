@@ -13,9 +13,11 @@
 
 use CrowdSec\Engine\Api\Data\EventInterface;
 use CrowdSec\Engine\Api\EventRepositoryInterface;
+use CrowdSec\Engine\Constants;
 use CrowdSec\Engine\Helper\Data as Helper;
 use CrowdSec\Engine\Helper\Event as EventHelper;
 use CrowdSec\Engine\CapiEngine\Remediation;
+use CrowdSec\RemediationEngine\Decision;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\App\AreaList;
 use Magento\Framework\App\ExceptionHandlerInterface;
@@ -29,6 +31,7 @@ use Magento\Framework\Registry;
 use CrowdSec\Engine\CapiEngine\Storage;
 use Magento\Framework\App\Config\Storage\WriterInterface;
 use Magento\Framework\App\Cache\TypeListInterface;
+use CrowdSec\RemediationEngine\DecisionFactory;
 
 require '../app/bootstrap.php';
 
@@ -67,6 +70,10 @@ class RunActionRunner extends \Magento\Framework\App\Http
      * @var TypeListInterface
      */
     private $cacheTypeList;
+    /**
+     * @var DecisionFactory
+     */
+    private $decisionFactory;
 
     public function __construct(
         ObjectManagerInterface $objectManager,
@@ -85,6 +92,7 @@ class RunActionRunner extends \Magento\Framework\App\Http
         Storage $storage,
         WriterInterface $configWriter,
         TypeListInterface $cacheTypeList,
+        DecisionFactory $decisionFactory,
         ExceptionHandlerInterface $exceptionHandler = null
     ) {
 
@@ -100,6 +108,7 @@ class RunActionRunner extends \Magento\Framework\App\Http
         $this->storage = $storage;
         $this->configWriter = $configWriter;
         $this->cacheTypeList = $cacheTypeList;
+        $this->decisionFactory = $decisionFactory;
     }
 
     function launch()
@@ -159,6 +168,22 @@ class RunActionRunner extends \Magento\Framework\App\Http
                     $this->configWriter->save(Helper::XML_PATH_FORCED_TEST_IP, $ip);
                     $this->cacheTypeList->cleanType('config');
                     $result = 'saved';
+                    break;
+                case 'add-local-decision':
+                    $value = $_GET['ip'];
+                    $type = $_GET['type'];
+                    $duration = $_GET['duration'];
+                    $origin = $_GET['origin'];
+                    $scope = Constants::SCOPE_IP;
+                    $decision = $this->decisionFactory->create([
+                        'identifier' => $origin . Decision::ID_SEP . $type . Decision::ID_SEP .
+                                        $scope . Decision::ID_SEP . $value, 'scope' => $scope,
+                        'value' => $value,
+                        'type' => $type,
+                        'origin' => $origin,
+                        'expiresAt' => time() + (int)$duration]);
+                    $this->remediation->getCacheStorage()->storeDecision($decision);
+                    $result = json_encode($this->remediation->getCacheStorage()->commit(), true);
                     break;
                 default:
                     throw new Exception("Unknown action type:$action");
