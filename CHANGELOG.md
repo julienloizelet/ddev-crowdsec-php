@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.7.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.7.1) - 2023-08-22
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.7.0...v1.7.1)
+
+### Fixed
+
+- Run `CrowdSec_Bouncer` post-start hook only if the module is enabled
+
+---
+
+
 ## [1.7.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.7.0) - 2023-08-18
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.6.0...v1.7.0)
 
