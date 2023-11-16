@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.8.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.8.0) - 2023-11-16
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.7.1...v1.8.0)
+
+### Changed
+
+- Change `crowdsec-config` command for WordPress to use `wp-config.php` instead of `wp-config-ddev.php` for multisite
+
+---
+
 ## [1.7.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.7.1) - 2023-08-22
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.7.0...v1.7.1)
 
