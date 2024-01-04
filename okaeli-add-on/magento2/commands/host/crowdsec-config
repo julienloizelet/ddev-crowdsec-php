@@ -25,6 +25,7 @@ echo "Now setting ${PROXY_IP} as CrowdSec_Bouncer Trusted IP"
 ddev magento config:set crowdsec_bouncer/advanced/remediation/trust_ip_forward_list ${PROXY_IP}
 else
    echo "CrowdSec Bouncer module is not enabled"
+   echo "Result is: $ENABLED"
 fi
 
 exit 0

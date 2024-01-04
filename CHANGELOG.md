@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.9.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.9.1) - 2024-01-04
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.9.0...v1.9.1)
+
+### Changed
+
+- Add debug for `crowdsec-config` command for Magento 2
+
+---
+
 ## [1.9.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.9.0) - 2024-01-04
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.8.0...v1.9.0)
 
