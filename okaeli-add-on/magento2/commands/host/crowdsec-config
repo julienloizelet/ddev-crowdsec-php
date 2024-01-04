@@ -8,7 +8,9 @@
 ## Usage: crowdsec-config
 ## Example: "ddev crowdsec-config"
 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 BOUNCER_KEY=$(ddev create-bouncer magento2 | sed 's/\r$//')
+echo "$BOUNCER_KEY" > "$SCRIPT_DIR/bouncer_key_plain.txt"
 API_URL="https://crowdsec:8080"
 PROXY_IP=$(ddev find-ip ddev-router | sed 's/\r$//')
 echo "Bouncer 'magento2' created"

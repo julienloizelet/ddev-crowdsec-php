@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ------
 
+## [1.9.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.9.0) - 2024-01-04
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.8.0...v1.9.0)
+
+### Changed
+
+- Change `crowdsec-config` command for Magento 2 to create a file with plain text bouncer key
+
+---
+
 ## [1.8.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.8.0) - 2023-11-16
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.7.1...v1.8.0)
 
