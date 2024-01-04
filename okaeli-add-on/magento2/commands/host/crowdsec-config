@@ -15,14 +15,14 @@ API_URL="https://crowdsec:8080"
 PROXY_IP=$(ddev find-ip ddev-router | sed 's/\r$//')
 echo "Bouncer 'magento2' created"
 ENABLED=$(ddev exec magerun2 module:status -n CrowdSec_Bouncer | sed 's/CrowdSec_Bouncer : //' | sed 's/ //g')
-if [ "$ENABLED" == "Moduleisenabled" ];
+if echo "$ENABLED" | grep -q "Moduleisenabled";
 then
 echo "Now setting ${BOUNCER_KEY} as CrowdSec_Bouncer Api key"
-ddev magento config:set crowdsec_bouncer/general/connection/api_key ${BOUNCER_KEY}
+ddev magento config:set crowdsec_bouncer/general/connection/api_key "${BOUNCER_KEY}"
 echo "Now setting ${API_URL} as CrowdSec_Bouncer Api url"
 ddev magento config:set crowdsec_bouncer/general/connection/api_url ${API_URL}
 echo "Now setting ${PROXY_IP} as CrowdSec_Bouncer Trusted IP"
-ddev magento config:set crowdsec_bouncer/advanced/remediation/trust_ip_forward_list ${PROXY_IP}
+ddev magento config:set crowdsec_bouncer/advanced/remediation/trust_ip_forward_list "${PROXY_IP}"
 else
    echo "CrowdSec Bouncer module is not enabled"
    echo "Result is: $ENABLED"
