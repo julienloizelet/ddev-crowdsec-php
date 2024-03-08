@@ -11,6 +11,9 @@
  * This script should be copied in the root folder of your WordPress sources
  *
  */
+// As we load WordPress with wp-load.php, bouncer is bouncing.
+// And we don't want to bounce here, so we define a constant to prevent it.
+defined( 'ALREADY_BOUNCED_WITH_STANDALONE' ) || define( 'ALREADY_BOUNCED_WITH_STANDALONE', true );
 require_once __DIR__ . '/wp-load.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';

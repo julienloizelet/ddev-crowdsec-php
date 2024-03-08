@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.11.2](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.11.2) - 2024-03-08
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.11.1...v1.11.2)
+
+### Fixed
+
+- Do not bounce `cache-actions.php`
+
+---
+
 ## [1.11.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.11.1) - 2024-03-08
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.11.0...v1.11.1)
 
