@@ -7,20 +7,30 @@
  */
 /**
  * This script is aimed to be called directly in a browser (development only, do not use in production)
- * It will act on the LAPI cache depending on the auto-prepend settings file and on the passed parameter.
+ * It will act on the LAPI cache depending on the passed parameter.
  * This script should be copied in the root folder of your WordPress sources
+ *
  */
-require_once __DIR__ . '/my-code/crowdsec-bouncer/vendor/autoload.php';
-require_once __DIR__ . '/my-code/crowdsec-bouncer/inc/Bouncer.php';
+require_once __DIR__ . '/wp-load.php';
+require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
+require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';
+require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/options-config.php';
 
-/**
- * @var $crowdSecStandaloneBouncerConfig
- */
+
 if (isset($_GET['action']) && in_array($_GET['action'], ['refresh', 'clear', 'prune','captcha-phrase'])) {
     $action = $_GET['action'];
-    $jsonConfigs = require_once __DIR__.'/my-code/crowdsec-bouncer/inc/standalone-settings.php';
-    $crowdSecConfigs = json_decode($jsonConfigs, true);
-    $bouncer = new Bouncer($crowdSecConfigs);
+    $crowdSecWpPluginOptions = getCrowdSecOptionsConfig();
+    $data = [];
+    foreach ($crowdSecWpPluginOptions as $option) {
+        $data[$option['name']] = is_multisite() ? get_site_option($option['name']) : get_option($option['name']);
+    }
+    $configs = $data;
+    if(!empty($data['crowdsec_auto_prepend_file_mode'])){
+        $jsonConfigs = require_once __DIR__.'/wp-content/plugins/crowdsec/inc/standalone-settings.php';
+        $configs = json_decode($jsonConfigs, true);
+    }
+
+    $bouncer = new Bouncer($configs);
     $result = "<h1>Cache action has been done: $action</h1>";
 
     switch ($action) {
@@ -66,5 +76,5 @@ if (isset($_GET['action']) && in_array($_GET['action'], ['refresh', 'clear', 'pr
 </html>
 ";
 } else {
-    exit('You must pass an "action" param (refresh, clear or prune)' . \PHP_EOL);
+    exit('You must pass an "action" param (refresh, clear, prune or captcha-phrase)' . \PHP_EOL);
 }

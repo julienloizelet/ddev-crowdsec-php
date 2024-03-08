@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.11.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.11.0) - 2024-03-08
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.10.0...v1.11.0)
+
+### Added
+
+- Added `cache-actions-with-wordpress-load.php` for WordPress bouncer
+
+---
+
 ## [1.10.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.10.0) - 2024-03-08
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.9.2...v1.10.0)
 
