@@ -9,7 +9,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/) and th
 The [public API](https://semver.org/spec/v2.0.0.html#spec-item-1) of this project is defined by the `install.yaml` 
 file and `project_files` listed in the `install.yaml` file.
 
-------
+---
+
+## [1.10.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.10.0) - 2024-03-08
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.9.2...v1.10.0)
+
+### Added
+
+- Added `php.ini` for WordPress bouncer
+
+---
 
 ## [1.9.2](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.9.2) - 2024-01-04
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.9.1...v1.9.2)
