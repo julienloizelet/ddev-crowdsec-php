@@ -19,6 +19,9 @@ require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/options-config.php';
 
+use CrowdSecWordPressBouncer\Bouncer;
+use CrowdSecWordPressBouncer\Constants;
+
 
 if (isset($_GET['action']) && in_array($_GET['action'], ['refresh', 'clear', 'prune','captcha-phrase'])) {
     $action = $_GET['action'];

@@ -14,6 +14,9 @@
 require_once __DIR__ . '/wp-content/plugins/crowdsec/vendor/autoload.php';
 require_once __DIR__ . '/wp-content/plugins/crowdsec/inc/Bouncer.php';
 
+use CrowdSecWordPressBouncer\Bouncer;
+use CrowdSecWordPressBouncer\Constants;
+
 /**
  * @var $crowdSecStandaloneBouncerConfig
  */
