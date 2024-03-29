@@ -1,6 +1,5 @@
 # Crowdsec PHP DDEV add-on
 
-![project is maintained](https://img.shields.io/maintenance/yes/2023.svg)
 [![Version](https://img.shields.io/github/v/release/julienloizelet/ddev-crowdsec-php?include_prereleases)](https://github.com/julienloizelet/ddev-crowdsec-php/releases)
 
 
