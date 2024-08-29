@@ -16,10 +16,12 @@ services:
       - ./okaeli-add-on/custom_files/crowdsec/cfssl:/tmp/cfssl
       - ./okaeli-add-on/custom_files/crowdsec/custom-config.yaml:/etc/crowdsec/config.yaml.local
       - ./okaeli-add-on/custom_files/crowdsec/custom-local-api-credentials.yaml:/etc/crowdsec/local_api_credentials.yaml.local
+      - ./okaeli-add-on/custom_files/crowdsec/acquis/appsec.yaml:/etc/crowdsec/acquis.d/appsec.yaml
     environment:
-      - DISABLE_AGENT=true
+      - COLLECTIONS=crowdsecurity/appsec-virtual-patching crowdsecurity/appsec-generic-rules
     ports:
       - "8080"
+      - "7422"
   web:
     links:
       - crowdsec:crowdsec

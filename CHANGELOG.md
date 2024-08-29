@@ -11,6 +11,24 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.13.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.13.0) - 2024-08-29
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.12.0...v1.13.0)
+
+### Added
+
+- Add `AppSec` configuration and files
+
+### Changed
+
+- Remove `DISABLE_AGENT=true` as it breaks `AppSec` feature
+- Allow more certificates OU for SSL connexion
+
+### Fixed
+
+- Fix `crowdsec-config` command for Native PHP projects
+
+---
+
 ## [1.12.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.12.0) - 2024-03-29
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.11.2...v1.12.0)
 
