@@ -16,7 +16,5 @@ api:
       ca_cert_path: /tmp/cfssl/ca-chain.pem #CA used to verify the client certs
       bouncers_allowed_ou:
         - bouncer-ou
-        - agent-ou
       agents_allowed_ou:
         - agent-ou
-        - bouncer-ou

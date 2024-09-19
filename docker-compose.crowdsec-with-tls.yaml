@@ -1,0 +1,9 @@
+#ddev-generated
+# ddev manages this file and may delete or overwrite it unless the above line is removed.
+# This file comes from "ddev get julienloizelet/ddev-crowdsec-php"
+services:
+  crowdsec:
+    volumes:
+      - ./okaeli-add-on/custom_files/crowdsec/cfssl:/tmp/cfssl
+      - ./okaeli-add-on/custom_files/crowdsec/custom-config.yaml:/etc/crowdsec/config.yaml.local
+      - ./okaeli-add-on/custom_files/crowdsec/custom-local-api-credentials.yaml:/etc/crowdsec/local_api_credentials.yaml.local

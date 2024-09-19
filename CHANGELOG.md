@@ -11,6 +11,16 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.14.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.14.0) - 2024-09-19
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.13.0...v1.14.0)
+
+### Changed
+
+- Separate TLS configuration for easy removal
+
+---
+
+
 ## [1.13.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.13.0) - 2024-08-29
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.12.0...v1.13.0)
 
