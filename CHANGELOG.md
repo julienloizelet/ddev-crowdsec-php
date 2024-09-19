@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.15.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.15.0) - 2024-09-19
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.14.0...v1.15.0)
+
+### Added
+
+- Add `AppSec` testing rule 
+
+---
+
 ## [1.14.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.14.0) - 2024-09-19
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.13.0...v1.14.0)
 

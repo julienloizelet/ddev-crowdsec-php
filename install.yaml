@@ -6,6 +6,7 @@ project_files:
 - commands/crowdsec/create-watcher
 - okaeli-add-on/config_overrides/crowdsec/config.crowdsec.yaml
 - okaeli-add-on/custom_files/crowdsec/acquis/appsec.yaml
+- okaeli-add-on/custom_files/crowdsec/appsec-rules/vpatch-testappsec.yaml
 - okaeli-add-on/custom_files/crowdsec/cfssl/agent.pem
 - okaeli-add-on/custom_files/crowdsec/cfssl/agent-key.pem
 - okaeli-add-on/custom_files/crowdsec/cfssl/bouncer.pem

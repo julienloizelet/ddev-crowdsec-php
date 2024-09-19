@@ -1,0 +1,22 @@
+#ddev-generated
+# ddev manages this file and may delete or overwrite it unless the above line is removed.
+# This file comes from "ddev get julienloizelet/ddev-crowdsec-php"name: crowdsecurity/vpatch-testappsec
+description: "Just for testing"
+rules:
+  - zones:
+      - URI
+    transform:
+      - lowercase
+    match:
+      type: endsWith
+      value: /testappsec.php
+labels:
+  type: scan
+  service: http
+  confidence: 3
+  spoofable: 0
+  behavior: "http:scan"
+  label: "Access to test file"
+  classification:
+    - attack.T1595
+    - attack.T1190
