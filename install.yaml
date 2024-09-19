@@ -33,6 +33,7 @@ project_files:
 - okaeli-add-on/wordpress/custom_files/auto-prepend-file-bouncer/php.ini
 - docker-compose.crowdsec.yaml
 - docker-compose.crowdsec-with-tls.yaml
+- docker-compose.crowdsec-tls-for-appsec-hack.yaml
 
 post_install_actions:
   - |

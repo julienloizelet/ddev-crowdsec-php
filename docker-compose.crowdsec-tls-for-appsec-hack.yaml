@@ -1,0 +1,11 @@
+#ddev-generated
+# ddev manages this file and may delete or overwrite it unless the above line is removed.
+# This file comes from "ddev get julienloizelet/ddev-crowdsec-php"
+services:
+  crowdsec:
+    volumes:
+      - ./okaeli-add-on/custom_files/crowdsec/cfssl/agent.pem:/etc/ssl/certs/agent.pem
+      - ./okaeli-add-on/custom_files/crowdsec/cfssl/agent-key.pem:/etc/ssl/private/agent-key.pem
+      - ./okaeli-add-on/custom_files/crowdsec/cfssl/ca-chain.pem:/etc/ssl/certs/ca-chain.pem
+
+

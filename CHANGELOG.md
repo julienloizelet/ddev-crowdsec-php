@@ -11,6 +11,14 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.16.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.16.0) - 2024-09-19
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.15.1...v1.16.0)
+
+### Changed
+
+- Add SSL certificates in trusted store to allow TLS configuration and AppSec calls
+
+---
 
 ## [1.15.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.15.1) - 2024-09-19
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.15.0...v1.15.1)
