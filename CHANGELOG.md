@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.17.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.17.0) - 2024-09-26
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.16.0...v1.17.0)
+
+### Changed
+
+- Add `NET_ADMIN` and `NET_RAW` capabilities to the `crowdsec` container
+
+---
+
 ## [1.16.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.16.0) - 2024-09-19
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.15.1...v1.16.0)
 

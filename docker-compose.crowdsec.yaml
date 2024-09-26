@@ -4,6 +4,9 @@
 services:
   crowdsec:
     image: crowdsecurity/crowdsec:latest
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     container_name: ddev-${DDEV_SITENAME}-crowdsec
     hostname: ${DDEV_SITENAME}-crowdsec
     # These labels ensure this service is discoverable by ddev.
