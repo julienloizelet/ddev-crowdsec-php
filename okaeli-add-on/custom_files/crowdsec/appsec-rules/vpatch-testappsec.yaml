@@ -6,11 +6,12 @@ description: "Just for testing"
 rules:
   - zones:
       - URI
+      - ARGS
     transform:
       - lowercase
     match:
       type: endsWith
-      value: /testappsec.php
+      value: testappsec.php
 labels:
   type: scan
   service: http
