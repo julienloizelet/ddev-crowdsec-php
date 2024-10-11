@@ -30,6 +30,7 @@ project_files:
 - okaeli-add-on/wordpress/custom_files/crowdsec/crowdsec-prepend-nginx-site.conf
 - okaeli-add-on/wordpress/custom_files/crowdsec/php/cache-actions-from-plugin-folder.php
 - okaeli-add-on/wordpress/custom_files/crowdsec/php/cache-actions-with-wordpress-load.php
+- okaeli-add-on/wordpress/custom_files/crowdsec/html/appsec-post.html
 - okaeli-add-on/wordpress/custom_files/auto-prepend-file-bouncer/php.ini
 - docker-compose.crowdsec.yaml
 - docker-compose.crowdsec-with-tls.yaml
