@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.20.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.20.0) - 2024-10-24
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.19.0...v1.20.0)
+
+### Added
+
+- Add `AppSec Upload` test html content and `wp_appsec_custom_upload.php` script for WordPress page
+
+---
+
 ## [1.19.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.19.0) - 2024-10-11
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.18.0...v1.19.0)
 

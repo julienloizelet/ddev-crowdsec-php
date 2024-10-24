@@ -1,0 +1,59 @@
+<!-- #ddev-generated -->
+<!-- # ddev manages this file and may delete or overwrite it unless the above line is removed.
+# This file comes from "ddev get julienloizelet/ddev-crowdsec-php" -->
+<!-- wp:paragraph -->
+<p id="intro">This page allows uploading image.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<form id="imageUploadForm" enctype="multipart/form-data">
+    <label for="image">Select an image to upload:</label>
+    <input type="file" id="image" name="file" accept="image/*" required="">
+    <button type="submit">Upload Image</button>
+</form>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div id="uploadedImage"></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script>
+    document.getElementById('imageUploadForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData();
+        const fileInput = document.getElementById('image');
+        formData.append('file', fileInput.files[0]);
+
+        // Send the image via AJAX to the PHP script
+        fetch('/wp_appsec_custom_upload.php', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => {
+                const contentType = response.headers.get("content-type");
+                if (contentType && contentType.indexOf("application/json") !== -1) {
+                    return response.json();
+                } else {
+                    return response.status;  // Fallback: return status code (e.g. 403, 500, etc.)
+                }
+            })
+            .then(data => {
+                if (typeof data === 'object' && data.filelink) {
+                    // If the response is JSON and contains the filelink, display the uploaded image
+                    document.getElementById('uploadedImage').innerHTML = `<img src="${data.filelink}" alt="Uploaded Image">`;
+                } else if (typeof data === 'number') {
+                    // Handle status code
+                    document.getElementById('uploadedImage').innerHTML = data;
+                } else {
+                    alert('Failed to upload the image.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred during the upload.');
+            });
+    });
+</script>
+
+<!-- /wp:html -->
