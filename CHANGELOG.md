@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.20.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.20.1) - 2024-10-24
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.20.0...v1.20.1)
+
+### Fixed
+
+- Fix `AppSec Upload` test html content for WP 4.9
+
+---
+
 ## [1.20.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.20.0) - 2024-10-24
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.19.0...v1.20.0)
 
