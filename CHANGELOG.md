@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.21.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.21.0) - 2024-10-29
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.20.1...v1.21.0)
+
+### Changed
+
+- Allow the service to be accessible directly from host machine at `localhost:8080`.
+
+---
+
 ## [1.20.1](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.20.1) - 2024-10-24
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.20.0...v1.20.1)
 

@@ -20,7 +20,7 @@ services:
     environment:
       - COLLECTIONS=crowdsecurity/appsec-virtual-patching crowdsecurity/appsec-generic-rules
     ports:
-      - "8080"
+      - "8080:8080"
       - "7422"
   web:
     links:
