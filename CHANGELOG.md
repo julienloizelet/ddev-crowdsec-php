@@ -11,6 +11,15 @@ file and `project_files` listed in the `install.yaml` file.
 
 ---
 
+## [1.22.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.22.0) - 2025-09-05
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.21.0...v1.22.0)
+
+### Changed
+
+- Mount `/var/lib/crowdsec/data/` folder as it is required since CrowdSec 1.7.0
+
+---
+
 ## [1.21.0](https://github.com/julienloizelet/ddev-crowdsec-php/releases/tag/v1.21.0) - 2024-10-29
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-crowdsec-php/compare/v1.20.1...v1.21.0)
 

@@ -17,6 +17,7 @@ services:
       - ".:/mnt/ddev_config"
       - ./okaeli-add-on/custom_files/crowdsec/acquis/appsec.yaml:/etc/crowdsec/acquis.d/appsec.yaml
       - ./okaeli-add-on/custom_files/crowdsec/appsec-rules/vpatch-testappsec.yaml:/etc/crowdsec/appsec-rules/vpatch-testappsec.yaml
+      - crowdsec_data:/var/lib/crowdsec/data
     environment:
       - COLLECTIONS=crowdsecurity/appsec-virtual-patching crowdsecurity/appsec-generic-rules
     ports:
@@ -25,3 +26,6 @@ services:
   web:
     links:
       - crowdsec:crowdsec
+
+volumes:
+  crowdsec_data:
